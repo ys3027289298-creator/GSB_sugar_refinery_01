@@ -2,7 +2,7 @@ import json
 
 
 def new_game():
-    return {'queue': [], 'amount': 0, 'events': {1: (5, 6), 2: (1, 2)}, 'items': [], 'cap': 2, 'count': 0, 'closed': False, 'nodes': {1: True, 2: True}, 'edges': {(1, 2): 5}}
+    return {'queue': [], 'amount': 0, 'events': {1: (5, 6), 2: (1, 2)}, 'items': [], 'cap': 2, 'count': 0, 'closed': False, 'nodes': {1: True, 2: True}, 'edges': {(1, 2): 5}, 'snapshot': 5, 'value': 5, 'log': [], 'settled': False}
 
 def bug_3(state):
     return state["queue"].pop()
@@ -36,6 +36,12 @@ def bug_29(state):
 
 def bug_6(state):
     return len(state["items"]) - 1
+
+def bug_30(state):
+    return True
+
+def bug_31(state):
+    return True
 
 def main():
     print("命令: run/quit")
